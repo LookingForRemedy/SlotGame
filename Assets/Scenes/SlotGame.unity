@@ -601,6 +601,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1711637506}
     m_Modifications:
+    - target: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+      propertyPath: mainCanvasRT
+      value: 
+      objectReference: {fileID: 825333185}
+    - target: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+      propertyPath: startPositionY
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 2210113141399014109, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -700,6 +708,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5835124992507007731, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
   m_PrefabInstance: {fileID: 888693224}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &888693226 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8417868727687473053, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+  m_PrefabInstance: {fileID: 888693224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &938272572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -707,6 +720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1711637506}
     m_Modifications:
+    - target: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+      propertyPath: mainCanvasRT
+      value: 
+      objectReference: {fileID: 825333185}
     - target: {fileID: 2210113141399014109, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -804,6 +821,11 @@ PrefabInstance:
 --- !u!224 &938272573 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5835124992507007731, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+  m_PrefabInstance: {fileID: 938272572}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &938272574 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8417868727687473053, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
   m_PrefabInstance: {fileID: 938272572}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
@@ -975,6 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711637506}
+  - component: {fileID: 1711637507}
   m_Layer: 5
   m_Name: Reels
   m_TagString: Untagged
@@ -1005,6 +1028,47 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1711637507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711637505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadd70619485a494d9fbaa947a98fb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reelsRT:
+  - {fileID: 1049096362409648511}
+  - {fileID: 938272574}
+  - {fileID: 888693226}
+  reels:
+  - {fileID: 1049096362409648515}
+  - {fileID: 1875719206}
+  - {fileID: 1725503815}
+  delayStep: 0.5
+  startEase: 5
+  stopEase: 6
+  boostDistance: -800
+  linearDistance: -3200
+  stopDistance: -4000
+  boostDuration: 0.83
+  linearDuration: 1.5
+  stopDuration: 0.89
+  playButton: {fileID: 1796504058}
+--- !u!114 &1725503815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+  m_PrefabInstance: {fileID: 888693224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343708fa8ec851740be93a0269e99406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1796504056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1152,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1796504059}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1711637507}
+        m_TargetAssemblyTypeName: ReelsRoll, Assembly-CSharp
+        m_MethodName: ScrollStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1796504059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,6 +1270,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875719206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+  m_PrefabInstance: {fileID: 938272572}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343708fa8ec851740be93a0269e99406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1049096362409648509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1201,6 +1288,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1711637506}
     m_Modifications:
+    - target: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+      propertyPath: mainCanvasRT
+      value: 
+      objectReference: {fileID: 825333185}
     - target: {fileID: 2210113141399014109, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -1300,3 +1391,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5835124992507007731, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
   m_PrefabInstance: {fileID: 1049096362409648509}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1049096362409648511 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8417868727687473053, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+  m_PrefabInstance: {fileID: 1049096362409648509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049096362409648515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1804296256128593319, guid: c1f64fa5a75c1c84384d204a09079907, type: 3}
+  m_PrefabInstance: {fileID: 1049096362409648509}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343708fa8ec851740be93a0269e99406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
