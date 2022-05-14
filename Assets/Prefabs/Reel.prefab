@@ -549,6 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343708fa8ec851740be93a0269e99406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameConfig: {fileID: 11400000, guid: c221b83193bd7594ebd842d277ffbf8e, type: 2}
   symbolOnReel:
   - {fileID: 4216510793302866285}
   - {fileID: 3912918819542606832}
@@ -568,4 +569,5 @@ MonoBehaviour:
   - {fileID: 8796499958254778168, guid: fde45aa4120d65f4ab07974755fcee34, type: 3}
   - {fileID: 4588468031203458904, guid: fde45aa4120d65f4ab07974755fcee34, type: 3}
   - {fileID: 4830219810074551288, guid: fde45aa4120d65f4ab07974755fcee34, type: 3}
+  reelId: 0
   mainCanvasRT: {fileID: 0}
